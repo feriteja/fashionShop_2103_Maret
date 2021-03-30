@@ -11,20 +11,6 @@ import Animated, {
 } from 'react-native-reanimated';
 
 const homeHeader = ({scrollY}: {scrollY: number}) => {
-  // const aniStyle = useAnimatedStyle(() => {
-  //   const translateY = interpolate(
-  //     scrollY,
-  //     [0, 100],
-  //     [0, 200],
-  //     Extrapolate.CLAMP,
-  //   );
-
-  //   return {
-  //     transform: [{translateY: withTiming(translateY)}],
-  //   };
-  // });
-  console.log(scrollY);
-
   return (
     <Animated.View
       style={[styles.container, {transform: [{translateY: scrollY}]}]}>
