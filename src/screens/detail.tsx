@@ -120,10 +120,12 @@ const detail = ({route, navigation}: any) => {
           <View style={{height: 10}} />
           <View style={[styles.actionBox, {width: width / 4 - 30, height: 60}]}>
             <Text style={{fontSize: 10, color: '#a0a0a0'}}>color</Text>
+            <View style={{height: 7}} />
             <View
               style={{
                 height: 5,
                 backgroundColor: '#a0d6d8',
+                borderRadius: 99,
               }}
             />
           </View>
@@ -143,11 +145,27 @@ const detail = ({route, navigation}: any) => {
             <TouchableOpacity
               disabled={numItem === 1}
               onPress={() => setNumItem(a => a - 1)}>
-              <IconFeather name="minus-circle" size={25} color="#d5d6d8" />
+              <IconFeather name="minus" size={25} color="#d5d6d8" />
             </TouchableOpacity>
-            <Text style={{color: '#d5d6d8'}}>{numItem}</Text>
+            <View
+              style={{
+                height: 25,
+                width: 25,
+                borderRadius: 999,
+                borderColor: '#d5d6d8',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderWidth: 0.4,
+              }}>
+              <Text
+                style={{
+                  color: '#d5d6d8',
+                }}>
+                {numItem}
+              </Text>
+            </View>
             <TouchableOpacity onPress={() => setNumItem(a => a + 1)}>
-              <IconFeather name="plus-circle" size={25} color="#d5d6d8" />
+              <IconFeather name="plus" size={25} color="#d5d6d8" />
             </TouchableOpacity>
           </View>
           <View style={{height: 10}} />
